@@ -16,6 +16,7 @@
       .mono-strong { font: 16px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill:#E5E7EB; }
       .accent { fill:#10B981; } /* teal */
       .subtle { fill:#6B7280; }
+      .cat { fill:#00FF41; font: 15px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; } /* bright laser green */
     </style>
   </defs>
 
@@ -36,19 +37,25 @@
   <text class="mono-strong" x="120" y="45">NVIM — tabs: [1] README.md  [2] stats.md</text>
   <text class="mono-strong" x="940" y="45">djraivis — /dev/crafts</text>
 
-  <!-- Columns -->
-  <text class="mono"><tspan class="accent">whoami</tspan> → Minimalist • Terminal-driven</text>
-  <text class="mono" x="120" y="110"><tspan class="accent">stack</tspan>  → Go · TypeScript · Terminal UIs</text>
-  <text class="mono" x="120" y="140"><tspan class="accent">focus</tspan>  → Developer tooling • Minimal UIs</text>
+  <!-- Left column -->
+  <text x="40" y="85" class="mono">
+    <tspan class="accent">whoami</tspan> → Minimalist • Terminal-driven
+  </text>
+  <text x="40" y="115" class="mono">
+    <tspan class="accent">stack</tspan> → Go · Inkdrop · Terminal UIs
+  </text>
+  <text x="40" y="145" class="mono">
+    <tspan class="accent">focus</tspan> → Developer tooling • Minimal UIs
+  </text>
 
   <text class="mono" x="680" y="80">Less chrome, more signal.</text>
   <text class="mono" x="680" y="110">Text-first. Keyboard-friendly.</text>
   <text class="mono" x="680" y="140">sidekick spotted →</text>
 
   <!-- Cat column -->
-  <text class="mono" x="1180" y="80">/\_/\</text>
-  <text class="mono" x="1180" y="100">( o.o )</text>
-  <text class="mono" x="1180" y="120"> &gt; ^ &lt;</text>
+  <text class="cat" x="1180" y="80">/\_/\</text>
+  <text class="cat" x="1180" y="100">( o.o )</text>
+  <text class="cat" x="1180" y="120"> &gt; ^ &lt;</text>
 
   <!-- Divider -->
   <rect x="40" y="190" width="1320" height="1" fill="#1F2937"/>
