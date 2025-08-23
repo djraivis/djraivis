@@ -1,0 +1,199 @@
+<svg width="1400" height="380" viewBox="0 0 1400 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Dark theme gradients -->
+    <linearGradient id="glass-dark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0D1117" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0D1117" stop-opacity="0.65"/>
+    </linearGradient>
+    <linearGradient id="sheen-dark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.00"/>
+    </linearGradient>
+    
+    <!-- Light theme gradients -->
+    <linearGradient id="glass-light" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#F8F9FA" stop-opacity="0.65"/>
+    </linearGradient>
+    <linearGradient id="sheen-light" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#000000" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.00"/>
+    </linearGradient>
+    
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
+      <animate attributeName="flood-opacity" values="0.45;0.15;0.45" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="stdDeviation" values="18;12;18" dur="8s" repeatCount="indefinite"/>
+    </filter>
+    
+    <style>
+      .mono { 
+        font: 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; 
+        fill: #9CA3AF;
+        animation: textColor 8s infinite ease-in-out;
+      }
+      .mono-strong { 
+        font: 19px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; 
+        fill: #E5E7EB;
+        animation: textColorStrong 8s infinite ease-in-out;
+      }
+      .accent { 
+        fill: #10B981;
+        animation: accentColor 8s infinite ease-in-out;
+      }
+      .cat { 
+        fill: #00FF41; 
+        font: 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        animation: catColor 8s infinite ease-in-out;
+      }
+      
+      @keyframes textColor {
+        0%, 35% { fill: #9CA3AF; }
+        50% { fill: #6B7280; }
+        65%, 100% { fill: #4B5563; }
+      }
+      
+      @keyframes textColorStrong {
+        0%, 35% { fill: #E5E7EB; }
+        50% { fill: #6B7280; }
+        65%, 100% { fill: #1F2937; }
+      }
+      
+      @keyframes accentColor {
+        0%, 35% { fill: #10B981; }
+        50% { fill: #0891B2; }
+        65%, 100% { fill: #059669; }
+      }
+      
+      @keyframes catColor {
+        0%, 35% { fill: #00FF41; }
+        50% { fill: #22C55E; }
+        65%, 100% { fill: #16A34A; }
+      }
+      
+      .glass-bg {
+        fill: url(#glass-dark);
+        animation: glassBg 8s infinite ease-in-out;
+      }
+      
+      .title-bg {
+        fill: #0D1117;
+        opacity: 0.95;
+        animation: titleBg 8s infinite ease-in-out;
+      }
+      
+      .sheen-overlay {
+        fill: url(#sheen-dark);
+        opacity: 0.25;
+        animation: sheenOverlay 8s infinite ease-in-out;
+      }
+      
+      .divider {
+        fill: #1F2937;
+        animation: dividerColor 8s infinite ease-in-out;
+      }
+      
+      .status-bg {
+        fill: #0F141A;
+        opacity: 0.95;
+        animation: statusBg 8s infinite ease-in-out;
+      }
+      
+      @keyframes glassBg {
+        0%, 35% { fill: url(#glass-dark); }
+        65%, 100% { fill: url(#glass-light); }
+      }
+      
+      @keyframes titleBg {
+        0%, 35% { fill: #0D1117; }
+        50% { fill: #4B5563; }
+        65%, 100% { fill: #F1F5F9; }
+      }
+      
+      @keyframes sheenOverlay {
+        0%, 35% { fill: url(#sheen-dark); opacity: 0.25; }
+        50% { opacity: 0.20; }
+        65%, 100% { fill: url(#sheen-light); opacity: 0.15; }
+      }
+      
+      @keyframes dividerColor {
+        0%, 35% { fill: #1F2937; }
+        50% { fill: #6B7280; }
+        65%, 100% { fill: #D1D5DB; }
+      }
+      
+      @keyframes statusBg {
+        0%, 35% { fill: #0F141A; }
+        50% { fill: #4B5563; }
+        65%, 100% { fill: #E5E7EB; }
+      }
+      
+      .cursor {
+        fill: #10B981;
+        animation: cursorBlink 1.2s infinite, cursorColor 8s infinite ease-in-out;
+      }
+      
+      @keyframes cursorBlink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+      }
+      
+      @keyframes cursorColor {
+        0%, 35% { fill: #10B981; }
+        50% { fill: #0891B2; }
+        65%, 100% { fill: #059669; }
+      }
+    </style>
+  </defs>
+
+  <!-- Glassy body -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="20" rx="14" ry="14" width="1360" height="340" class="glass-bg"/>
+    <!-- Title bar -->
+    <rect x="20" y="20" rx="14" ry="14" width="1360" height="40" class="title-bg"/>
+    <!-- macOS dots -->
+    <circle cx="48" cy="40" r="7" fill="#FF5F56"/>
+    <circle cx="70" cy="40" r="7" fill="#FFBD2E"/>
+    <circle cx="92" cy="40" r="7" fill="#27C93F"/>
+    <!-- Sheen -->
+    <rect x="20" y="20" width="1360" height="340" class="sheen-overlay" rx="14" ry="14"/>
+  </g>
+
+  <!-- Header text -->
+  <text class="mono-strong" x="120" y="45">NVIM — tabs: [1] README.md  [2] stats.md</text>
+  <text class="mono-strong" x="1360" y="45" text-anchor="end">djraivis — /dev/crafts</text>
+
+  <!-- Left column -->
+  <text x="40" y="85" class="mono">
+    <tspan class="accent">whoami</tspan> → Minimalist • Terminal-driven
+  </text>
+  <text x="40" y="115" class="mono">
+    <tspan class="accent">stack</tspan> → Go · Inkdrop · Terminal UIs
+  </text>
+  <text x="40" y="145" class="mono">
+    <tspan class="accent">focus</tspan> → Developer tooling • Minimal UIs
+  </text>
+
+  <text class="mono" x="680" y="80">Less chrome, more signal.</text>
+  <text class="mono" x="680" y="110">Text-first. Keyboard-friendly.</text>
+  <text class="mono" x="680" y="140">sidekick spotted →</text>
+
+  <!-- Cat column -->
+  <text class="cat" x="1180" y="80">/\_/\</text>
+  <text class="cat" x="1180" y="100">( o.o )</text>
+  <text class="cat" x="1180" y="120"> &gt; ^ &lt;</text>
+
+  <!-- Divider -->
+  <rect x="40" y="190" width="1320" height="1" class="divider"/>
+
+  <!-- Terminal prompt -->
+  <text class="mono" x="40" y="220">djraivis@terminal:<tspan class="accent">~/crafts</tspan>$ </text>
+  <rect class="cursor" x="248" y="208" width="2" height="16" />
+  
+  <!-- Footer lines -->
+  <text class="mono" x="40" y="250"><tspan class="accent">now</tspan> → UKTV CTV • Go practice • Ghostty setup</text>
+
+  <!-- NVIM statusline -->
+  <rect x="20" y="320" width="1360" height="40" class="status-bg" rx="0" ry="0"/>
+  <text class="mono" x="40" y="345"><tspan class="accent">NORMAL</tspan>  README.md  utf-8  unix  main  LSP:✓  diag:0E 0W  %:100  Ln 42, Col 1</text>
+</svg>
