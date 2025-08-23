@@ -12,11 +12,11 @@
       <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
     </filter>
     <style>
-      .mono { font: 15px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill:#9CA3AF; }
-      .mono-strong { font: 16px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill:#E5E7EB; }
+      .mono { font: 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill:#9CA3AF; }
+      .mono-strong { font: 19px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill:#E5E7EB; }
       .accent { fill:#10B981; } /* teal */
       .subtle { fill:#6B7280; }
-      .cat { fill:#00FF41; font: 15px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; } /* bright laser green */
+      .cat { fill:#00FF41; font: 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; } /* bright laser green */
     </style>
   </defs>
 
