@@ -185,7 +185,7 @@
   <text x="40" y="115" class="mono">
     <tspan class="accent">whoami</tspan>
   </text>
-  <text x="40" y="135" class="mono">QA/dev → Minimalist • Terminal-driven</text>
+  <text x="40" y="135" class="mono">Digital Craftsman → Minimalist • Terminal-driven</text>
   
   <text x="40" y="165" class="mono">
     <tspan class="accent">cat stack.txt</tspan>
@@ -208,7 +208,7 @@
   <text class="cat" x="1180" y="215"> &gt; ^ &lt;</text>
   
   <!-- Footer lines -->
-  <text class="mono" x="40" y="250"><tspan class="accent">now</tspan> → UKTV CTV • Go practice • Ghostty setup</text>
+  <text class="mono" x="40" y="310"><tspan class="accent">now</tspan> → Nneovim • Go practice • Ghostty setup</text>
 
   <!-- NVIM statusline -->
   <rect x="20" y="320" width="1360" height="40" class="status-bg" rx="0" ry="0"/>

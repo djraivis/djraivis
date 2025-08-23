@@ -9,7 +9,7 @@
   <img src="assets/terminal-animated.svg" alt="Neovim glassy terminal - animated theme switching" width="100%" />
 </p>
 
-<pre>
+<!-- <pre>
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ ◉  ◎  ◎    ┌─── NVIM ───┐   tabs: [1] README.md  [2] stats.md                      djraivis — /dev/crafts   │
 ├────────────────────────────────────────────┬────────────────────────────────────────┬─────────┤
@@ -17,24 +17,25 @@
 │ stack  → Go · Inkdrop · Terminal UIs       │ Text-first. Keyboard-friendly.        │( o.o )   │
 │ focus  → Developer tooling • Minimal UIs   │ sidekick spotted →                     │ > ^ <    │
 ├────────────────────────────────────────────┴────────────────────────────────────────┴  🐾   ──┤
-│ now → UKTV CTV • Go practice • Ghostty setup                                                      <D-z>          │
+│ now → UKTV CTV • Go practice • Ghostty setup                                                                     │
 ├────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │ NORMAL  README.md  utf-8  unix  main  LSP:✓  diag:0E 0W  %:100  Ln 42, Col 1                               mmm  │
 └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-</pre>
+</pre> -->
+
 <details>  <summary>What I’m listening to while coding</summary>
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=mG32yHdtfzM" target="_blank">
-    <img src="https://img.youtube.com/vi/mG32yHdtfzM/hqdefault.jpg" width="204" alt="YouTube 1" />
-  </a>
-  <a href="https://www.youtube.com/watch?v=4h-bTbiW9c8" target="_blank">
-    <img src="https://img.youtube.com/vi/4h-bTbiW9c8/hqdefault.jpg" width="204" alt="YouTube 2" />
-  </a>
+  <a href="https://www.youtube.com/watch?v=CTM15wqVDFE" target="_blank">
+  <img src="https://img.youtube.com/vi/CTM15wqVDFE/hqdefault.jpg" width="280" alt="YouTube video CTM15wqVDFE" />
+ </a>
+  <a href="https://www.youtube.com/watch?v=XiAr1wk68WQ" target="_blank">
+  <img src="https://img.youtube.com/vi/XiAr1wk68WQ/hqdefault.jpg" width="280" alt="YouTube video XiAr1wk68WQ" />
+</a>
   <a href="https://www.youtube.com/watch?v=B7uOajUwG-U" target="_blank">
     <img src="https://img.youtube.com/vi/B7uOajUwG-U/hqdefault.jpg" width="204" alt="YouTube 3" />
   </a>
 <a href="https://www.youtube.com/watch?v=-ppRBqNxr-E" target="_blank">
-  <img src="https://img.youtube.com/vi/-ppRBqNxr-E/hqdefault.jpg" width="204" alt="YouTube video -ppRBqNxr-E" />
+  <img src="https://img.youtube.com/vi/-ppRBqNxr-E/hqdefault.jpg" width="204" alt="YouTube 4" />
 </a>
 </p>
 </details>
