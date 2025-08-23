@@ -26,10 +26,10 @@
 <details>  <summary>What I’m listening to while coding</summary>
 <p align="center">
   <a href="https://www.youtube.com/watch?v=CTM15wqVDFE" target="_blank">
-  <img src="https://img.youtube.com/vi/CTM15wqVDFE/hqdefault.jpg" width="280" alt="YouTube video CTM15wqVDFE" />
+  <img src="https://img.youtube.com/vi/CTM15wqVDFE/hqdefault.jpg" width="204" alt="YouTube video CTM15wqVDFE" />
  </a>
   <a href="https://www.youtube.com/watch?v=XiAr1wk68WQ" target="_blank">
-  <img src="https://img.youtube.com/vi/XiAr1wk68WQ/hqdefault.jpg" width="280" alt="YouTube video XiAr1wk68WQ" />
+  <img src="https://img.youtube.com/vi/XiAr1wk68WQ/hqdefault.jpg" width="204" alt="YouTube video XiAr1wk68WQ" />
 </a>
   <a href="https://www.youtube.com/watch?v=B7uOajUwG-U" target="_blank">
     <img src="https://img.youtube.com/vi/B7uOajUwG-U/hqdefault.jpg" width="204" alt="YouTube 3" />
