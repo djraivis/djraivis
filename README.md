@@ -1,15 +1,12 @@
 # Raivis
 
-**Digital crafts(man|code)**  
-Minimalist • Transparent • Terminal-driven  
-
 <pre>
 ┌──────────────────────────────────────────────────────────┐
 │ ●  ○  ○   djraivis — /dev/crafts                         │
 ├──────────────────────────────────────────────────────────┤
-│  whoami        → Builder of practical tools              │
-│  stack         → Go · React · Terminal UIs               │
-│  focus         → DX tooling, subtle UI                   │
+│  whoami        → Minimalist • Terminal-driven            │
+│  stack         → Go · TypeScript · Terminal UIs          │
+│  focus         → Developer tooling • Minimal UIs         │
 │                                                          │
 │  manifesto                                               │
 │  ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓  │
@@ -18,7 +15,7 @@ Minimalist • Transparent • Terminal-driven
 │  ┃  Compose small parts into reliable systems.       ┃  │
 │  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛  │
 │                                                          │
-│  now           → Craft URL • Go practice • Ghostty setup  │
+│  now           → UKTV CTV • Go practice • Ghostty setup  │
 └──────────────────────────────────────────────────────────┘
 </pre>
 
