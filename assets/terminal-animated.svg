@@ -43,7 +43,7 @@
       }
       .cat { 
         fill: #00FF41; 
-        font: 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        font: 28px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
         animation: catColor 8s infinite ease-in-out;
       }
       
@@ -129,9 +129,14 @@
       }
       
       .cursor {
-        fill: #10B981;
+        fill: #68D391;
         animation: cursorBlink 1.2s infinite, cursorColor 8s infinite ease-in-out;
       }
+      
+      .path-bg { fill: #2D3748; }
+      .branch-bg { fill: #4A5568; }
+      .path-text { fill: #E2E8F0; font: 22px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .branch-text { fill: #CBD5E0; font: 22px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
       
       @keyframes cursorBlink {
         0%, 50% { opacity: 1; }
@@ -139,9 +144,9 @@
       }
       
       @keyframes cursorColor {
-        0%, 35% { fill: #10B981; }
-        50% { fill: #0891B2; }
-        65%, 100% { fill: #059669; }
+        0%, 35% { fill: #68D391; }
+        50% { fill: #9AE6B4; }
+        65%, 100% { fill: #48BB78; }
       }
     </style>
   </defs>
@@ -163,32 +168,44 @@
   <text class="mono-strong" x="120" y="45">NVIM — tabs: [1] README.md  [2] stats.md</text>
   <text class="mono-strong" x="1360" y="45" text-anchor="end">djraivis — /dev/crafts</text>
 
-  <!-- Left column -->
-  <text x="40" y="85" class="mono">
-    <tspan class="accent">whoami</tspan> → Minimalist • Terminal-driven
-  </text>
+
+  
+<!-- Terminal prompt -->
+<!-- Path segment -->
+<path d="M 40 63 L 280 63 L 294 79 L 280 92 L 40 92 Z" class="path-bg"/>
+<text class="path-text" x="52" y="84">~/crafts/djraivis</text>
+
+<!-- Branch segment -->
+<path d="M 280 63 L 420 63 L 434 79 L 420 92 L 280 92 L 294 79 Z" class="branch-bg"/>
+<text class="branch-text" x="297" y="84">develop</text>
+
+<rect class="cursor" x="440" y="65" width="12" height="25" />
+
+<!-- Terminal command output (like after running a command) -->
   <text x="40" y="115" class="mono">
-    <tspan class="accent">stack</tspan> → Go · Inkdrop · Terminal UIs
+    <tspan class="accent">whoami</tspan>
   </text>
-  <text x="40" y="145" class="mono">
-    <tspan class="accent">focus</tspan> → Developer tooling • Minimal UIs
+  <text x="40" y="135" class="mono">QA/dev → Minimalist • Terminal-driven</text>
+  
+  <text x="40" y="165" class="mono">
+    <tspan class="accent">cat stack.txt</tspan>
   </text>
+  <text x="40" y="185" class="mono">Go · Inkdrop · Terminal UIs</text>
+  
+  <text x="40" y="215" class="mono">
+    <tspan class="accent">cat focus.md</tspan>
+  </text>
+  <text x="40" y="235" class="mono">Developer tooling • Minimal UIs</text>
 
-  <text class="mono" x="680" y="80">Less chrome, more signal.</text>
-  <text class="mono" x="680" y="110">Text-first. Keyboard-friendly.</text>
-  <text class="mono" x="680" y="140">sidekick spotted →</text>
+  <!-- Right side output -->
+  <text class="mono" x="680" y="135">Less chrome, more signal.</text>
+  <text class="mono" x="680" y="185">Text-first. Keyboard-friendly.</text>
+  <text class="mono" x="680" y="235">sidekick spotted →</text>
 
-  <!-- Cat column -->
-  <text class="cat" x="1180" y="80">/\_/\</text>
-  <text class="cat" x="1180" y="100">( o.o )</text>
-  <text class="cat" x="1180" y="120"> &gt; ^ &lt;</text>
-
-  <!-- Divider -->
-  <rect x="40" y="190" width="1320" height="1" class="divider"/>
-
-  <!-- Terminal prompt -->
-  <text class="mono" x="40" y="220">djraivis@terminal:<tspan class="accent">~/crafts</tspan>$ </text>
-  <rect class="cursor" x="248" y="208" width="2" height="16" />
+  <!-- Cat ASCII art -->
+  <text class="cat" x="1180" y="155">/\_/\</text>
+  <text class="cat" x="1180" y="185">( o.o )</text>
+  <text class="cat" x="1180" y="215"> &gt; ^ &lt;</text>
   
   <!-- Footer lines -->
   <text class="mono" x="40" y="250"><tspan class="accent">now</tspan> → UKTV CTV • Go practice • Ghostty setup</text>
