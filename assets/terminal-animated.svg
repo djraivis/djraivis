@@ -1,167 +1,257 @@
 <svg width="1400" height="380" viewBox="0 0 1400 380" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Dark theme gradients -->
-    <linearGradient id="glass-dark" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0D1117" stop-opacity="0.85"/>
-      <stop offset="1" stop-color="#0D1117" stop-opacity="0.65"/>
-    </linearGradient>
-    <linearGradient id="sheen-dark" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.10"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.00"/>
+    <!-- Ocean theme gradients -->
+    <linearGradient id="glass-ocean" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0C4A6E" stop-opacity="0.75"/>
     </linearGradient>
     
-    <!-- Light theme gradients -->
-    <linearGradient id="glass-light" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.85"/>
-      <stop offset="1" stop-color="#F8F9FA" stop-opacity="0.65"/>
-    </linearGradient>
-    <linearGradient id="sheen-light" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#000000" stop-opacity="0.05"/>
-      <stop offset="1" stop-color="#000000" stop-opacity="0.00"/>
+    <!-- Fire theme gradients -->
+    <linearGradient id="glass-fire" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1F1108" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#451A03" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#7C2D12" stop-opacity="0.75"/>
     </linearGradient>
     
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
-      <animate attributeName="flood-opacity" values="0.45;0.15;0.45" dur="8s" repeatCount="indefinite"/>
-      <animate attributeName="stdDeviation" values="18;12;18" dur="8s" repeatCount="indefinite"/>
+    <!-- Sakura theme gradients -->
+    <linearGradient id="glass-sakura" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1F0A1E" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#3B1B47" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#5B21B6" stop-opacity="0.75"/>
+    </linearGradient>
+    
+    <!-- Forest theme gradients -->
+    <linearGradient id="glass-forest" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1F0C" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#1B3B1F" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#166534" stop-opacity="0.75"/>
+    </linearGradient>
+    
+    <!-- Universal sheen -->
+    <radialGradient id="sheen" cx="0.3" cy="0.2" r="0.8">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </radialGradient>
+    
+    <!-- Modern shadow with glow -->
+    <filter id="modern-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="24" flood-opacity="0.6"/>
+      <animate attributeName="stdDeviation" values="24;16;24" dur="16s" repeatCount="indefinite"/>
+    </filter>
+    
+    <!-- Floating particles filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3"/>
+      <feColorMatrix values="1 0 1 0 0  0 1 1 0 0  1 0 1 0 0  0 0 0 1 0"/>
     </filter>
     
     <style>
+      /* Modern theme cycling animation - 16 second cycle through 4 themes */
       .mono { 
         font: 18px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; 
-        fill: #9CA3AF;
-        animation: textColor 8s infinite ease-in-out;
+        animation: modernText 16s infinite ease-in-out;
       }
       .mono-strong { 
         font: 19px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; 
-        fill: #E5E7EB;
-        animation: textColorStrong 8s infinite ease-in-out;
+        animation: modernTextStrong 16s infinite ease-in-out;
       }
       .accent { 
-        fill: #10B981;
-        animation: accentColor 8s infinite ease-in-out;
+        animation: modernAccent 16s infinite ease-in-out;
       }
       .cat { 
         fill: #00FF41; 
         font: 28px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-        animation: catColor 8s infinite ease-in-out;
+        animation: modernCat 16s infinite ease-in-out;
       }
       
-      @keyframes textColor {
-        0%, 35% { fill: #9CA3AF; }
-        50% { fill: #6B7280; }
-        65%, 100% { fill: #4B5563; }
+      /* Ocean → Fire → Sakura → Forest theme cycle */
+      @keyframes modernText {
+        0%, 22% { fill: #94A3B8; } /* Ocean - light blue-gray */
+        25%, 47% { fill: #FCA5A5; } /* Fire - light coral */
+        50%, 72% { fill: #F0ABFC; } /* Sakura - light pink */
+        75%, 100% { fill: #86EFAC; } /* Forest - light green */
       }
       
-      @keyframes textColorStrong {
-        0%, 35% { fill: #E5E7EB; }
-        50% { fill: #6B7280; }
-        65%, 100% { fill: #1F2937; }
+      @keyframes modernTextStrong {
+        0%, 22% { fill: #F1F5F9; } /* Ocean - bright white */
+        25%, 47% { fill: #FEF3C7; } /* Fire - warm white */
+        50%, 72% { fill: #FDF2F8; } /* Sakura - pink white */
+        75%, 100% { fill: #F0FDF4; } /* Forest - green white */
       }
       
-      @keyframes accentColor {
-        0%, 35% { fill: #10B981; }
-        50% { fill: #0891B2; }
-        65%, 100% { fill: #059669; }
+      @keyframes modernAccent {
+        0%, 22% { fill: #0EA5E9; } /* Ocean - sky blue */
+        25%, 47% { fill: #F97316; } /* Fire - orange */
+        50%, 72% { fill: #D946EF; } /* Sakura - magenta */
+        75%, 100% { fill: #22C55E; } /* Forest - green */
       }
       
-      @keyframes catColor {
-        0%, 35% { fill: #00FF41; }
-        50% { fill: #22C55E; }
-        65%, 100% { fill: #16A34A; }
+      @keyframes modernCat {
+        0%, 22% { fill: #38BDF8; } /* Ocean - light blue */
+        25%, 47% { fill: #FB923C; } /* Fire - orange */
+        50%, 72% { fill: #E879F9; } /* Sakura - pink */
+        75%, 100% { fill: #4ADE80; } /* Forest - green */
       }
       
+      /* Glass background cycling */
       .glass-bg {
-        fill: url(#glass-dark);
-        animation: glassBg 8s infinite ease-in-out;
+        animation: modernGlass 16s infinite ease-in-out;
       }
       
+      @keyframes modernGlass {
+        0%, 22% { fill: url(#glass-ocean); }
+        25%, 47% { fill: url(#glass-fire); }
+        50%, 72% { fill: url(#glass-sakura); }
+        75%, 100% { fill: url(#glass-forest); }
+      }
+      
+      /* Title bar cycling */
       .title-bg {
-        fill: #0D1117;
         opacity: 0.95;
-        animation: titleBg 8s infinite ease-in-out;
+        animation: modernTitle 16s infinite ease-in-out;
       }
       
+      @keyframes modernTitle {
+        0%, 22% { fill: #0F172A; } /* Ocean dark */
+        25%, 47% { fill: #1F1108; } /* Fire dark */
+        50%, 72% { fill: #1F0A1E; } /* Sakura dark */
+        75%, 100% { fill: #0A1F0C; } /* Forest dark */
+      }
+      
+      /* Sheen overlay */
       .sheen-overlay {
-        fill: url(#sheen-dark);
-        opacity: 0.25;
-        animation: sheenOverlay 8s infinite ease-in-out;
+        fill: url(#sheen);
+        opacity: 0.4;
+        animation: modernSheen 16s infinite ease-in-out;
       }
       
-      .divider {
-        fill: #1F2937;
-        animation: dividerColor 8s infinite ease-in-out;
+      @keyframes modernSheen {
+        0%, 22% { opacity: 0.4; }
+        25%, 47% { opacity: 0.3; }
+        50%, 72% { opacity: 0.35; }
+        75%, 100% { opacity: 0.4; }
       }
       
+      /* Status bar cycling */
       .status-bg {
-        fill: #0F141A;
         opacity: 0.95;
-        animation: statusBg 8s infinite ease-in-out;
+        animation: modernStatus 16s infinite ease-in-out;
       }
       
-      @keyframes glassBg {
-        0%, 35% { fill: url(#glass-dark); }
-        65%, 100% { fill: url(#glass-light); }
+      @keyframes modernStatus {
+        0%, 22% { fill: #0F172A; } /* Ocean */
+        25%, 47% { fill: #1F1108; } /* Fire */
+        50%, 72% { fill: #1F0A1E; } /* Sakura */
+        75%, 100% { fill: #0A1F0C; } /* Forest */
       }
       
-      @keyframes titleBg {
-        0%, 35% { fill: #0D1117; }
-        50% { fill: #4B5563; }
-        65%, 100% { fill: #F1F5F9; }
+      /* Modern prompt styling */
+      .path-bg { 
+        animation: modernPathBg 16s infinite ease-in-out;
+      }
+      .branch-bg { 
+        animation: modernBranchBg 16s infinite ease-in-out;
+      }
+      .path-text { 
+        fill: #E2E8F0; 
+        font: 22px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        animation: modernPathText 16s infinite ease-in-out;
+      }
+      .branch-text { 
+        fill: #CBD5E0; 
+        font: 22px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        animation: modernBranchText 16s infinite ease-in-out;
       }
       
-      @keyframes sheenOverlay {
-        0%, 35% { fill: url(#sheen-dark); opacity: 0.25; }
-        50% { opacity: 0.20; }
-        65%, 100% { fill: url(#sheen-light); opacity: 0.15; }
+      @keyframes modernPathBg {
+        0%, 22% { fill: #1E293B; } /* Ocean */
+        25%, 47% { fill: #451A03; } /* Fire */
+        50%, 72% { fill: #3B1B47; } /* Sakura */
+        75%, 100% { fill: #1B3B1F; } /* Forest */
       }
       
-      @keyframes dividerColor {
-        0%, 35% { fill: #1F2937; }
-        50% { fill: #6B7280; }
-        65%, 100% { fill: #D1D5DB; }
+      @keyframes modernBranchBg {
+        0%, 22% { fill: #0C4A6E; } /* Ocean */
+        25%, 47% { fill: #7C2D12; } /* Fire */
+        50%, 72% { fill: #5B21B6; } /* Sakura */
+        75%, 100% { fill: #166534; } /* Forest */
       }
       
-      @keyframes statusBg {
-        0%, 35% { fill: #0F141A; }
-        50% { fill: #4B5563; }
-        65%, 100% { fill: #E5E7EB; }
+      @keyframes modernPathText {
+        0%, 22% { fill: #E0F2FE; } /* Ocean white */
+        25%, 47% { fill: #FEF3C7; } /* Fire white */
+        50%, 72% { fill: #FDF2F8; } /* Sakura white */
+        75%, 100% { fill: #F0FDF4; } /* Forest white */
       }
       
+      @keyframes modernBranchText {
+        0%, 22% { fill: #BAE6FD; } /* Ocean light */
+        25%, 47% { fill: #FED7AA; } /* Fire light */
+        50%, 72% { fill: #F3E8FF; } /* Sakura light */
+        75%, 100% { fill: #DCFCE7; } /* Forest light */
+      }
+      
+      /* Enhanced cursor with smooth blinking */
       .cursor {
-        fill: #68D391;
-        animation: cursorBlink 1.2s infinite, cursorColor 8s infinite ease-in-out;
+        animation: modernCursor 1.5s infinite ease-in-out, modernCursorColor 16s infinite ease-in-out;
       }
       
-      .path-bg { fill: #2D3748; }
-      .branch-bg { fill: #4A5568; }
-      .path-text { fill: #E2E8F0; font: 22px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-      .branch-text { fill: #CBD5E0; font: 22px ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-      
-      @keyframes cursorBlink {
-        0%, 50% { opacity: 1; }
-        51%, 100% { opacity: 0; }
+      @keyframes modernCursor {
+        0%, 45% { opacity: 1; }
+        50%, 100% { opacity: 0.2; }
       }
       
-      @keyframes cursorColor {
-        0%, 35% { fill: #68D391; }
-        50% { fill: #9AE6B4; }
-        65%, 100% { fill: #48BB78; }
+      @keyframes modernCursorColor {
+        0%, 22% { fill: #0EA5E9; } /* Ocean */
+        25%, 47% { fill: #F97316; } /* Fire */
+        50%, 72% { fill: #D946EF; } /* Sakura */
+        75%, 100% { fill: #22C55E; } /* Forest */
+      }
+      
+      /* Floating particle animation */
+      .particle {
+        opacity: 0.6;
+        animation: float 8s infinite ease-in-out;
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.6; }
+        33% { transform: translateY(-10px) translateX(5px); opacity: 0.8; }
+        66% { transform: translateY(5px) translateX(-3px); opacity: 0.4; }
       }
     </style>
   </defs>
 
-  <!-- Glassy body -->
-  <g filter="url(#shadow)">
-    <rect x="20" y="20" rx="14" ry="14" width="1360" height="340" class="glass-bg"/>
+  <!-- Modern glassy terminal -->
+  <g filter="url(#modern-shadow)">
+    <rect x="20" y="20" rx="16" ry="16" width="1360" height="340" class="glass-bg"/>
     <!-- Title bar -->
-    <rect x="20" y="20" rx="14" ry="14" width="1360" height="40" class="title-bg"/>
-    <!-- macOS dots -->
-    <circle cx="48" cy="40" r="7" fill="#FF5F56"/>
-    <circle cx="70" cy="40" r="7" fill="#FFBD2E"/>
-    <circle cx="92" cy="40" r="7" fill="#27C93F"/>
-    <!-- Sheen -->
-    <rect x="20" y="20" width="1360" height="340" class="sheen-overlay" rx="14" ry="14"/>
+    <rect x="20" y="20" rx="16" ry="16" width="1360" height="40" class="title-bg"/>
+    <!-- macOS dots with modern glow -->
+    <circle cx="48" cy="40" r="7" fill="#FF5F56" filter="url(#glow)"/>
+    <circle cx="70" cy="40" r="7" fill="#FFBD2E" filter="url(#glow)"/>
+    <circle cx="92" cy="40" r="7" fill="#27C93F" filter="url(#glow)"/>
+    <!-- Enhanced sheen -->
+    <rect x="20" y="20" width="1360" height="340" class="sheen-overlay" rx="16" ry="16"/>
+  </g>
+  
+  <!-- Floating particles -->
+  <g class="particle" filter="url(#glow)">
+    <circle cx="200" cy="100" r="2" fill="#0EA5E9" opacity="0.6">
+      <animate attributeName="cy" values="100;80;100" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="800" cy="150" r="1.5" fill="#F97316" opacity="0.4">
+      <animate attributeName="cy" values="150;130;150" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="cx" values="800;820;800" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1200" cy="200" r="2.5" fill="#D946EF" opacity="0.5">
+      <animate attributeName="cy" values="200;180;200" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.8;0.5" dur="5s" repeatCount="indefinite"/>
+    </circle>
   </g>
 
   <!-- Header text -->
@@ -181,36 +271,111 @@
 
 <rect class="cursor" x="440" y="65" width="12" height="25" />
 
-<!-- Terminal command output (like after running a command) -->
-  <text x="40" y="115" class="mono">
-    <tspan class="accent">whoami</tspan>
-  </text>
-  <text x="40" y="135" class="mono">Digital craftsman → Terminal-driven</text>
+<!-- Modern terminal output with smooth animations -->
+  <g opacity="1">
+    <text x="40" y="115" class="mono">
+      <tspan class="accent">whoami</tspan>
+      <animate attributeName="opacity" values="0;1;1;1" dur="16s" repeatCount="indefinite" begin="0s"/>
+    </text>
+    <text x="40" y="135" class="mono">Digital craftsman → Terminal-driven
+      <animate attributeName="opacity" values="0;0;1;1" dur="16s" repeatCount="indefinite" begin="0.5s"/>
+    </text>
+  </g>
   
-  <text x="40" y="165" class="mono">
-    <tspan class="accent">cat stack.txt</tspan>
-  </text>
-  <text x="40" y="185" class="mono">Fishshell • Ghostty • Neovim .</text>
+  <g opacity="1">
+    <text x="40" y="165" class="mono">
+      <tspan class="accent">cat stack.txt</tspan>
+      <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="1s"/>
+    </text>
+    <text x="40" y="185" class="mono">Fishshell • Ghostty • Neovim
+      <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="1.5s"/>
+    </text>
+  </g>
   
-  <text x="40" y="215" class="mono">
-    <tspan class="accent">cat focus.md</tspan>
+  <g opacity="1">
+    <text x="40" y="215" class="mono">
+      <tspan class="accent">cat focus.md</tspan>
+      <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="2s"/>
+    </text>
+    <text x="40" y="235" class="mono">Developer tooling • .dotfiles
+      <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="2.5s"/>
+    </text>
+  </g>
+
+  <!-- Right side output with staggered appearance -->
+  <text class="mono" x="680" y="135">Less chrome, more signal.
+    <animate attributeName="opacity" values="0;0;1;1" dur="16s" repeatCount="indefinite" begin="3s"/>
   </text>
-  <text x="40" y="235" class="mono">Developer tooling • .dotfiles</text>
+  <text class="mono" x="680" y="185">Text-first. Keyboard-friendly.
+    <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="3.5s"/>
+  </text>
+  <text class="mono" x="680" y="235">sidekick spotted →
+    <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="4s"/>
+  </text>
 
-  <!-- Right side output -->
-  <text class="mono" x="680" y="135">Less chrome, more signal.</text>
-  <text class="mono" x="680" y="185">Text-first. Keyboard-friendly.</text>
-  <text class="mono" x="680" y="235">sidekick spotted →</text>
-
-  <!-- Cat ASCII art -->
-  <text class="cat" x="1180" y="155">/\_/\</text>
-  <text class="cat" x="1180" y="185">( o.o )</text>
-  <text class="cat" x="1180" y="215"> &gt; ^ &lt;</text>
+  <!-- Bigger proportional ASCII cat with breathing and blinking -->
+  <g class="cat">
+    <!-- Cat head (bigger size) -->
+    <text x="1160" y="155" style="font-size: 32px;">/\_/\
+      <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="4.5s"/>
+      <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite"/>
+    </text>
+    
+    <!-- Cat face with animated eyes (matching bigger font size) -->
+    <g style="font-size: 32px;">
+      <!-- Face frame -->
+      <text x="1160" y="185">( </text>
+      <text x="1190" y="185">.</text>
+      <text x="1220" y="185"> )</text>
+      
+      <!-- Normal eyes (default state) -->
+      <g opacity="1">
+        <text x="1175" y="185">o</text>
+        <text x="1205" y="185">o</text>
+        <animate attributeName="opacity" values="1;1;1;0;0;1;1;0;0;1;1;0;0;1;1;1" dur="8s" repeatCount="indefinite" begin="5s"/>
+      </g>
+      
+      <!-- Blinking eyes -->
+      <g opacity="0">
+        <text x="1175" y="185">-</text>
+        <text x="1205" y="185">-</text>
+        <animate attributeName="opacity" values="0;0;0;1;1;0;0;0;0;0;0;0;0;0;0;0" dur="8s" repeatCount="indefinite" begin="5s"/>
+      </g>
+      
+      <!-- Looking left -->
+      <g opacity="0">
+        <text x="1175" y="185">&lt;</text>
+        <text x="1205" y="185">&lt;</text>
+        <animate attributeName="opacity" values="0;0;0;0;0;0;0;1;1;0;0;0;0;0;0;0" dur="8s" repeatCount="indefinite" begin="5s"/>
+      </g>
+      
+      <!-- Looking right -->
+      <g opacity="0">
+        <text x="1175" y="185">&gt;</text>
+        <text x="1205" y="185">&gt;</text>
+        <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;0" dur="8s" repeatCount="indefinite" begin="5s"/>
+      </g>
+      
+      <!-- Initial appearance animation for entire face -->
+      <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="4.7s"/>
+    </g>
+    
+    <!-- Cat mouth (matching bigger font size) -->
+    <text x="1160" y="215" style="font-size: 32px;"> &gt; ^ &lt;
+      <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="4.9s"/>
+    </text>
+  </g>
   
-  <!-- Footer lines -->
-  <text class="mono" x="40" y="310"><tspan class="accent">now</tspan> → Command Line Applications in Go</text>
+  <!-- Footer with animation -->
+  <text class="mono" x="40" y="310">
+    <tspan class="accent">now</tspan> → Command Line Applications in Go
+    <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="5s"/>
+  </text>
 
-  <!-- NVIM statusline -->
-  <rect x="20" y="320" width="1360" height="40" class="status-bg" rx="0" ry="0"/>
-  <text class="mono" x="40" y="345"><tspan class="accent">NORMAL</tspan>  README.md  utf-8  unix  main  LSP:✓  diag:0E 0W  %:100  Ln 42, Col 1</text>
+  <!-- Modern NVIM statusline with rounded corners and glow -->
+  <rect x="20" y="320" width="1360" height="40" class="status-bg" rx="8" ry="8" filter="url(#glow)"/>
+  <text class="mono" x="40" y="345">
+    <tspan class="accent">NORMAL</tspan>  README.md  utf-8  unix  main  LSP:✓  diag:0E 0W  %:100  Ln 42, Col 1
+    <animate attributeName="opacity" values="0;0;0;1" dur="16s" repeatCount="indefinite" begin="5.5s"/>
+  </text>
 </svg>
