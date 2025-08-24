@@ -185,17 +185,17 @@
   <text x="40" y="115" class="mono">
     <tspan class="accent">whoami</tspan>
   </text>
-  <text x="40" y="135" class="mono">Issue resolver → minimalist • terminal-driven</text>
-
+  <text x="40" y="135" class="mono">Digital craftsman → Terminal-driven</text>
+  
   <text x="40" y="165" class="mono">
     <tspan class="accent">cat stack.txt</tspan>
   </text>
-  <text x="40" y="185" class="mono">WezTerm • fishshell • nvim .</text>
-
+  <text x="40" y="185" class="mono">Fishshell • Ghostty • Neovim .</text>
+  
   <text x="40" y="215" class="mono">
     <tspan class="accent">cat focus.md</tspan>
   </text>
-  <text x="40" y="235" class="mono">Developer tooling • testing</text>
+  <text x="40" y="235" class="mono">Developer tooling • .dotfiles</text>
 
   <!-- Right side output -->
   <text class="mono" x="680" y="135">Less chrome, more signal.</text>
@@ -208,7 +208,7 @@
   <text class="cat" x="1180" y="215"> &gt; ^ &lt;</text>
   
   <!-- Footer lines -->
-  <text class="mono" x="40" y="310"><tspan class="accent">now</tspan> → Go practice • Inkdrop • Ghostty setup</text>
+  <text class="mono" x="40" y="310"><tspan class="accent">now</tspan> → Command Line Applications in Go</text>
 
   <!-- NVIM statusline -->
   <rect x="20" y="320" width="1360" height="40" class="status-bg" rx="0" ry="0"/>
